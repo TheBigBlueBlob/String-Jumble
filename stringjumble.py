@@ -1,7 +1,7 @@
 """
 stringjumble.py
 Author: Liam S
-Credit: none
+Credit: Stack Overflow to learn what .join could do.
 
 Assignment:
 
@@ -28,7 +28,30 @@ erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 inputString = str(input("Please enter a string of text (the bigger the better): "))
 print('You entered "' + inputString + '". Now jumble it:')
 firstList = list(inputString)
-print(firstList[4:0:-1])
 
+secondList = firstList[::-1]
+print("".join(secondList))
+testList = []
+counter = len(firstList)
+counter2 = len(firstList)
+while counter > -1:
+    counter -= 1
+    if firstList[counter] == ' ':
+        testList.append("".join(firstList[counter:counter2]))
+        counter2 = counter
+testList.append(' ')
+testList.append("".join(firstList[:counter2]))
+print("".join(testList))
 
-
+thirdList = firstList[::-1]
+test2List = []
+counter3 = len(firstList)
+counter4 = len(firstList)
+while counter3 > -1:
+    counter3 -= 1
+    if thirdList[counter3] == ' ':
+        test2List.append("".join(thirdList[counter3:counter4]))
+        counter4 = counter3
+test2List.append(' ')
+test2List.append("".join(thirdList[:counter4]))
+print("".join(test2List))
