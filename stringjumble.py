@@ -27,8 +27,8 @@ erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
 inputString = str(input("Please enter a string of text (the bigger the better): "))
 print('You entered "' + inputString + '". Now jumble it:')
-list(inputString)
-
+firstList = list(inputString)
+print(firstList[4:0:-1])
 
 
 
